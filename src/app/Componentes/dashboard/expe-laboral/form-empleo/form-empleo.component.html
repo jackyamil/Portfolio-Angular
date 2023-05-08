@@ -1,0 +1,41 @@
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <label for="logoUno" class="form-label text-fluid">Logo</label>
+    <input class="form-control" type="file" formControlName="logo" [class.border-danger]="LogoInvalid">
+
+    <div *ngIf="Logo?.errors && Logo?.touched">
+      <p *ngIf="Logo?.hasError('required')" class="error">
+      La imagen es requerida.</p>
+    </div>
+
+    <label for="trabajoUno" class="form-label mt-3 text-fluid">Empleada doméstica</label>
+    <input type="text" formControlName="nombre" [class.border-danger]="NombreInvalid" class="form-control">
+
+    <div *ngIf="Nombre?.errors && Nombre?.touched">
+      <p *ngIf="Nombre?.hasError('required')" class="error">
+          El nombre es requerido.</p>
+    </div>
+    <div *ngIf="this.form.get('nombre')?.errors?.['maxlength']" class="error">
+      (Debe tener como máximo 30 caracteres)
+    </div>
+    <div *ngIf="this.form.get('nombre')?.errors?.['minlength']" class="error">
+      (Debe tener como minimo 10 caracteres)
+    </div>
+    
+    <label for="descripcionUno" class="form-label mt-3 text-fluid">Descripción:</label>
+    <textarea formControlName="descripcion" [class.border-danger]="DescripcionInvalid" class="form-control" rows="3"></textarea>
+    
+    <div *ngIf="Descripcion?.errors && Descripcion?.touched">
+        <p *ngIf="Descripcion?.hasError('required')" class="error">
+        La descripcion es requerida.</p>
+      </div>
+  <div *ngIf="this.form.get('descripcion')?.errors?.['maxlength']" class="error">
+    (Debe tener como máximo 500 caracteres)
+  </div>
+  <div *ngIf="this.form.get('descripcion')?.errors?.['minlength']" class="error">
+    (Debe tener como minimo 100 caracteres)
+  </div>
+
+    <button type="submit"class="btn btn-dark mt-2">Guardar</button>
+    <button type="submit"class="btn btn-danger mt-2">Eliminar</button>
+    <button type="submit"class="btn btn-secondary mt-2">Actualizar</button>
+  </form>

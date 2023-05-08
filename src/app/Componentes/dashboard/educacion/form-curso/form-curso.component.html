@@ -1,0 +1,33 @@
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <label for="educacionTres" class="form-label mt-3 text-fluid">Curso/Titulo</label>
+    <input type="text" formControlName="nombre" [class.border-danger]="NombreInvalid" class="form-control">
+    <div *ngIf="Nombre?.errors && Nombre?.touched">
+      <p *ngIf="Nombre?.hasError('required')" class="error">
+          El nombre es requerido.</p>
+    </div>
+    <div *ngIf="this.form.get('nombre')?.errors?.['maxlength']" class="error">
+      (Debe tener como máximo 30 caracteres)
+    </div>
+    <div *ngIf="this.form.get('nombre')?.errors?.['minlength']" class="error">
+      (Debe tener como minimo 10 caracteres)
+    </div>
+    <label for="enlace" class="form-label mt-3 text-fluid">Url</label>
+    <input  type="url" class="form-control"  formControlName="url" [class.border-danger]="UrlInvalid">
+   
+    <div *ngIf="Url?.errors && Url?.touched">
+      <p *ngIf="Url?.hasError('required')" class="error">
+      La url es requerida.</p>
+    </div>
+
+    <label for="certificado" class="form-label mt-3 text-fluid">Certificado</label>
+    <input class="form-control" type="file" formControlName="certificado" [class.border-danger]="CertificadoInvalid">
+
+    <div *ngIf="Certificado?.errors && Certificado?.touched">
+      <p *ngIf="Certificado?.hasError('required')" class="error">
+      La imagen es requerida.</p>
+    </div>
+
+    <button type="submit"class="btn btn-dark mt-2">Guardar</button>
+    <button type="submit"class="btn btn-danger mt-2">Eliminar</button>
+    <button type="submit"class="btn btn-secondary mt-2">Actualizar</button>
+  </form>

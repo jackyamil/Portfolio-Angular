@@ -1,0 +1,19 @@
+<!--seccion con foto, nombre, titulo y acerca de...-->
+<section id="sobre-mi">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <img [src]="fotoPerfil" class="img-fluid" [alt]="alt">
+          <h1 class="text-break">{{ nombre }} {{ apellido }}</h1>
+          <h4 class="text-break">{{ puesto }}</h4>
+        </div>
+        <div class="col-sm-1">
+          <a class="nav-link" [href]="enlaceMenu"><i class="fa-solid" [ngClass]="iconFlecha" ></i></a>
+        </div>
+        <div class="col-sm-7 pt-5 fs-5">
+          <p class="text-break fw-bold lh-base"> {{ sobreMi }} 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,30 @@
+/*administracion*/
+.dashboard{
+    margin: 1% 5%;
+}
+.accordion-button:not(.collapsed) {
+    --bs-accordion-active-color: rgb(0, 250, 0);
+    --bs-accordion-active-bg : rgb(61, 51, 51);
+ }
+.accordion-header button{
+    font-style: oblique;
+    font-size: large;
+    color:rgb(255, 0, 0);
+}
+.accordion-header button i{
+    color: rgb(12, 248, 23);
+}
+.text-fluid{
+   color:rgb(12, 248, 23);
+}
+/* imagen de fondo*/
+.img-fondo{
+    background-image: url(./../../../../assets/img/fondo2.png);
+    background-position: center center;
+/* Para que la imagen de fondo no se repita */
+    background-repeat: no-repeat;
+/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+    background-attachment: fixed;
+/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+    background-size: cover;
+}

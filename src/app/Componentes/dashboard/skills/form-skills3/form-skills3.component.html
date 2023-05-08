@@ -1,0 +1,31 @@
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <label for="iconoTres" class="form-label text-fluid">Icono/Bootstrap</label>
+    <input type="text" formControlName="nombre" [class.border-danger]="NombreInvalid" class="form-control">
+    <div *ngIf="Nombre?.errors && Nombre?.touched">
+      <p *ngIf="Nombre?.hasError('required')" class="error">
+          El nombre es requerido.</p>
+    </div>
+    <div *ngIf="this.form.get('nombre')?.errors?.['maxlength']" class="error">
+      (Debe tener como máximo 10 caracteres)
+    </div>
+    <div *ngIf="this.form.get('nombre')?.errors?.['minlength']" class="error">
+      (Debe tener como minimo 2 caracteres)
+    </div>
+
+    <label for="progresoUno" class="form-label mt-3 text-fluid">Porsentaje:</label>
+    <input type="number" formControlName="numero" [class.border-danger]="NumeroInvalid" class="form-control">
+    <div *ngIf="Numero?.errors && Numero?.touched">
+      <p *ngIf="Numero?.hasError('required')" class="error">
+          El nombre es requerido.</p>
+    </div>
+    <div *ngIf="this.form.get('numero')?.errors?.['maxlength']" class="error">
+      (Debe tener como máximo 3 caracteres)
+    </div>
+    <div *ngIf="this.form.get('numero')?.errors?.['minlength']" class="error">
+      (Debe tener como minimo 1 caracteres)
+    </div>
+
+    <button type="submit"class="btn btn-dark mt-2">Guardar</button>
+    <button type="submit"class="btn btn-danger mt-2">Eliminar</button>
+    <button type="submit"class="btn btn-secondary mt-2">Actualizar</button>
+  </form>

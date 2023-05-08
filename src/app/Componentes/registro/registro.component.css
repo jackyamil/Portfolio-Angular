@@ -1,0 +1,20 @@
+.error{
+    color: red;
+}
+.border-danger{
+    border-width: 0.3rem;
+    color: red;
+}
+.border-success{
+    border-width: 0.3rem;
+    
+}
+.modal-content{
+    padding-top:  3rem ;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.modal-body{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}

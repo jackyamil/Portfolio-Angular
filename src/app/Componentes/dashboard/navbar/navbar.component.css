@@ -1,0 +1,17 @@
+/*color a la barra de navegacion y menu*/
+.container-fluid{
+    background-color: black;
+}/*  estilo al logo y menu*/
+.navbar-brand{
+    margin-top: 0;
+    display:flex ;  
+}
+/*este es del logo solo*/
+.navbar-brand img{
+    border-radius: 1rem;
+    width: 3rem; 
+    height: 2.5rem;  
+}
+
+
+

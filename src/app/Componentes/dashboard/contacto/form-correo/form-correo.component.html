@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <label for="email" class="form-label text-fluid">Correo Electronico:</label>
+    <input type="email" formControlName="email" [class.border-danger]="MailInvalid" class="form-control">
+       <div *ngIf="Mail?.errors && Mail?.touched">
+           <p *ngIf="Mail?.hasError('required')" class="error">
+             El correo es requerido.</p>
+            <p *ngIf="Mail?.hasError('email')" class="error">
+             El formato del correo debe ser válido.</p>
+        </div>
+    <button type="submit"class="btn btn-dark mt-2">Guardar</button>
+    <button type="submit"class="btn btn-danger mt-2">Eliminar</button>
+    <button type="submit"class="btn btn-secondary mt-2">Actualizar</button>
+  </form>

@@ -1,0 +1,24 @@
+<!--cabecera-->
+<header>
+  <!-- barra de navegacion-->
+  <nav class="navbar p-0" >
+    <!-- logo del curso y redes-->
+    <div class="container-fluid pt-1" *ngFor="let logito of logo">
+      <a class="navbar-brand pt-0 m-0" routerLink="">
+        <img [src]="logito.img" [alt]="logito.alt" class="d-inline-block align-text-top">
+          <p class="text-light m-0">{{logito.nombre}}</p>
+      </a>
+      <div class="max-container mt-2">
+        <ul id="redes" class="m-0 p-0">
+          <li *ngFor="let red of redes">
+            <a [href]="red.url" target="_blank"><i class="fa-brands"[ngClass]="red.icono"></i></a>
+          </li>     
+          <li>
+            <!--boton de login>-->
+             <app-btncandado-c></app-btncandado-c>
+         </li>
+        </ul> 
+      </div>
+    </div>
+  </nav>
+</header>

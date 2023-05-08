@@ -1,0 +1,29 @@
+/*estilo a foto perfil*/
+.col-sm-4 img{
+    border-radius: 100%;
+    width: 13rem;
+}
+/*estilo a imagen ,nombre y titulo*/
+.container {
+    font-style:oblique;
+    color:rgb(0, 255, 0) 
+}
+/* estilo al nombre*/
+.container h1{
+    overflow-y: hidden;
+    font-style: oblique;
+    color:rgb(0, 255, 0)
+}
+.container h4{
+    overflow-y: hidden;
+    color:rgb(224, 255, 47)  
+}
+/*estilo a todas las secciones*/
+section{
+    margin-top: 5rem;
+}
+.text-fluid {
+    margin: 0 4%;
+    overflow-y: hidden;
+    color:rgb(0, 255, 0)
+}

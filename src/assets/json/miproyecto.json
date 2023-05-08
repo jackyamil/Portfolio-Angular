@@ -1,0 +1,241 @@
+{
+    "nombre":"Romina",
+    "apellido":"Diaz",
+    "puesto":"Full Stack Developer Jr",
+    "fotoPerfil": "assets/img/IMG-foto.jpg",
+    "alt":"foto de perfil",
+    "sobreMi": "Soy ama de casa con muchas ganas de trabajar. Quisiera empezar diciendo que soy muy creativa, habilidad que fuí desarrollando mientras trabajaba de niñera. Soy muy responsable y me desenvuelvo muy bien al momento de resolver problemas. Cabe destacar que tengo alma de líder, pero también sé acatar órdenes. Me adapto con facilidad a los cambios y mis mejores ideas se me ocurren por la noche.",
+    "iconFlecha":"fa-arrow-up-from-bracket",
+    "enlaceMenu":"#barra-menu",
+    "candadoAbierto":{
+        "icono":"fa-lock-open"
+    },
+    "logo":[
+        {
+            "img":"assets/img/argentina-programa.jpg",
+            "nombre": "Argentina Programa",
+            "alt":"logo de argentina programa"
+        }
+    ],
+    "redes":[
+        {
+            "id": 0,
+            "url":"https://codepen.io/",
+            "icono": "fa-codepen"
+        },
+        {
+            "id": 1,
+            "url":"https://ar.linkedin.com/",
+            "icono": "fa-linkedin"
+        },
+        {
+            "id": 2,
+            "url":"https://github.com/",
+            "icono": "fa-github"
+        }
+    ],
+    "banner": "assets/img/banner.jpg.JPG",
+    "altBanner":"imagen del banner",
+   
+    "trabajos":[
+        {
+            "id": 0,
+            "imagen":"assets/img/planchado.png",
+             "alt":"logo del trabajo",
+            "puesto": "Empleada Doméstica",
+            "tarea":"Me desempeñé en tareas como: planchados de ropa y limpieza en general en casa particular.",
+            "fechaIni":2015,
+            "fechaFin":2020
+        },
+        {
+            "id": 1,
+            "imagen":"assets/img/screenshot-20190115-001415.jpg",
+            "alt":"logo del trabajo",
+            "puesto": "Hotel Capri",
+            "tarea":" Me desempeñé en tareas como: maestranza, recepcionista y administración.",
+            "fechaIni":2016,
+            "fechaFin":2017
+        },
+        {
+            "id": 2,
+            "imagen":"assets/img/ninera.png",
+            "alt":"logo del trabajo",
+            "puesto": "Niñera",
+            "tarea":" Me desempeñé en tareas como: cuidado de niños, cocinar y ayudar con tareas escolares.",
+            "fechaIni":2017,
+            "fechaFin":2020
+        },
+        {
+            "id": 3,
+            "imagen":"assets/img/ninera.png",
+            "alt":"logo del trabajo",
+            "puesto": "Niñera",
+            "tarea":" Me desempeñé en tareas como: cuidado de niños, cocinar y limpieza en general.",
+            "fechaIni":2021,
+            "fechaFin":2022
+        },
+        {
+            "id": 4,
+            "imagen":"assets/img/narc273049714_471410877910960_3195748947275081422_n.jpg",
+            "alt":"logo del trabajo",
+            "puesto": "Ayudante en peluquería",
+            "tarea":" Actualmente, cuando en la peluquería Narcisa me necesitan, estoy full time. Me desempeño en lavado en bacha, secado más peinado y tratamientos capilares.",
+            "fechaIni": 2022,
+            "fechaFin":"actualidad"
+        }
+    ],
+    "estudios":[
+        {
+            "id": 0,
+            "titulo":"#Sé Programar",
+            "descripcion":"Cursé SeProgramar en Junio del 2022.",
+            "enlace": "https://www.argentina.gob.ar/economia/conocimiento/argentina-programa",
+             "nombre":"Argentina Programa: ",
+            "foto":"assets/img/ejemplo.png"
+        },
+        {
+            "id": 1,
+            "titulo":"Primaria Completa",
+            "descripcion": "Escuela N° 157 GOBERNADOR JORGE JOSÉ GALINA. Colegio Estatal de Chubut-Trelew. Dirección:Gobernador Lezana 1650 Villa Italia - Tel.: 280 - 4421181",
+            "enlace":"",
+            "nombre":"",
+            "foto":""
+        },
+        {
+            "id": 2,
+            "titulo":"Secundaria Incompleta",
+            "descripcion":"Colegio Provincial de Educación Secundaria Nº 20 GRAL. JOSÉ DE SAN MARTÍN. Colegio Estatal de Santa Cruz-Caleta Olivia. Dirección:José Koltum 1370 Los Pinos - Tel.: 297 - 4854056 ",
+            "enlace":"",
+            "nombre":"",
+            "foto":""
+        }
+       
+    ],
+    "habilidades":[
+        {
+            "id": 0,
+            "icono":"fa-brands fa-html5",
+            "colorico":"rgb(0,0,255)",
+            "porcentaje": 50,
+            "color":"bg-primary"
+        },
+        {
+            "id": 1,
+            "icono":"fa-brands fa-css3-alt",
+            "colorico":"rgb(226, 240, 35)",
+            "porcentaje": 45,
+            "color":"bg-warning"
+        },
+        {
+            "id": 2,
+            "icono":"fa-brands fa-bootstrap",
+            "colorico":"rgb(199, 43, 43)",
+            "porcentaje": 50,
+            "color":"bg-danger "
+        },
+        {
+            "id": 3,
+            "icono":"fa-brands fa-js",
+            "colorico":" rgb(49, 184, 207)",
+            "porcentaje": 30,
+            "color":"bg-info"
+        }
+    ],
+    "proyectos":[
+        {
+            "id":0,
+            "foto":"../../../assets/img/ejemplo.png",
+            "alt": "imagen del proyecto",
+            "descripcion":"Cada foto contiene una descripcion del proyecto."
+        },
+        {
+            "id":1,
+            "foto":"../../../assets/img/ejemplo2.png",
+            "alt": "imagen del proyecto",
+            "descripcion":"Contiene imagenes del proyecto estático."
+        },
+        {
+            "id":2,
+            "foto":"../../../assets/img/ejemplo3.jpg",
+            "alt": "imagen del proyecto",
+            "descripcion":"Contiene imagenes del proyecto dinámico."
+        },
+        {
+            "id":3,
+            "foto":"../../../assets/img/ejemplo4.png",
+            "alt": "imagen del proyecto",
+            "descripcion":"Contiene imagenes del proyecto backend."
+        }
+
+    ],
+    "copyright":"© Romii Diaz 2023",
+    "contactos":[
+        {
+            "id": 0,
+            "icono":"fa-brands fa-whatsapp",
+            "mensaje":"Telefono privado, envíame un Email"
+        },
+        {
+            "id": 1,
+            "icono":"fa-regular fa-envelope",
+            "mensaje":"Email@ejemplo.com"
+        }
+    ],
+    "barraMenu":[
+        {
+            "id": 0,
+            "boton":"btn btn-sm btn-outline-danger",
+            "icono":"fa-id-card",
+            "seccion":"Sobre Mi",
+            "enlace":"#sobre-mi"
+        },
+        {
+            "id": 1,
+            "boton":"btn btn-sm btn-outline-danger",
+            "icono":"fa-briefcase",
+            "seccion":"Experiencia Laboral",
+            "enlace":"#experiencia-laboral"
+        },
+        {
+            "id": 2,
+            "boton":"btn btn-sm btn-outline-danger",
+            "icono":"fa-graduation-cap",
+            "seccion":"Estudios",
+            "enlace":"#estudios"
+        },
+        {
+            "id": 3,
+            "boton":"btn btn-sm btn-outline-danger",
+            "icono":"fa-bars-progress",
+            "seccion":"Hard y Soft Skills",
+            "enlace":"#habilidades"
+        },
+        {
+            "id": 4,
+            "boton":"btn btn-sm btn-outline-danger",
+            "icono":"fa-house-laptop",
+            "seccion":"Proyectos",
+            "enlace":"#proyectos"
+        },
+        {
+            "id": 5,
+            "boton":"btn btn-sm btn-outline-danger",
+            "icono":"fa-mobile-screen",
+            "seccion":"Contactos",
+            "enlace":"#contacto"
+        }
+    ],
+    "error404":[
+        {
+            "mensaje":"ERROR",
+            "error":404,
+            "enlace":"No se encontro la página, ",
+            "url": "VOLVER",            
+            "juego": "Dónde está Wally?? ENCUENTRALO",
+            "img":"./../../../assets/img/error.jpg",
+            "alt":"Imagen de buscá a wally"
+            } 
+        ]
+
+
+}

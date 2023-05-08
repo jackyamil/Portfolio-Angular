@@ -1,0 +1,19 @@
+ <!-- secccion de habilidades-->
+ <section id="habilidades">
+  <h4 class="text-fluid mb-5">
+    <a class="nav-link" [href]="enlaceMenu">
+      <i class="fa-solid" [ngClass]="iconFlecha"></i>
+    </a>{{seccion|uppercase}}</h4>
+    <div class="container text-center">
+      <div class="row" *ngFor="let progreso of habilidades">
+        <div class="col-sm-2 mt-3">
+          <i [ngClass]="progreso.icono" [style.color]="progreso.colorico"></i>
+        </div>
+        <div class="col-sm-10">
+          <div class="progress mt-4" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar overflow-visible text-dark"[ngClass]="progreso.color" [style.width.%]="progreso.porcentaje">{{progreso.porcentaje}}%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

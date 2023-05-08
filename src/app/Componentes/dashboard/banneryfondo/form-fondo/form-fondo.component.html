@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <label for="fondo" class="form-label text-fluid">Imagen de Fondo</label>
+    <input class="form-control" type="file" formControlName="fondo" [class.border-danger]="FondoInvalid">
+
+    <div *ngIf="Fondo?.errors && Fondo?.touched">
+      <p *ngIf="Fondo?.hasError('required')" class="error">
+      La imagen es requerida.</p>
+    </div>
+
+    <button type="submit"class="btn btn-dark mt-2">Guardar</button>
+    <button type="submit"class="btn btn-danger mt-2">Eliminar</button>
+    <button type="submit"class="btn btn-secondary mt-2">Actualizar</button>
+  </form>

@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <label for="github" class="form-label mt-3 text-fluid">Github</label>
+    <input  type="url" class="form-control"  formControlName="url" [class.border-danger]="UrlInvalid">
+   
+    <div *ngIf="Url?.errors && Url?.touched">
+      <p *ngIf="Url?.hasError('required')" class="error">
+      La url es requerida.</p>
+    </div>
+    <button type="submit"class="btn btn-dark mt-2">Guardar </button>
+    <button type="submit"class="btn btn-danger mt-2">Eliminar</button>
+    <button type="submit"class="btn btn-secondary mt-2">Actualizar</button>
+  </form>

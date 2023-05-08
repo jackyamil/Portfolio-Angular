@@ -1,0 +1,10 @@
+.text-fluid{
+    color:rgb(12, 248, 23);
+ }
+ .error{
+   color: rgb(12, 248, 23);
+}
+.border-danger{
+   border-width: 0.3rem;
+   color: red;
+}

@@ -1,0 +1,23 @@
+/* estilo atodos los  titulos*/
+.container h4{
+    overflow-y: hidden;
+    color:rgb(224, 255, 47)  
+}
+/*estilo a todas las secciones*/
+section{
+    margin-top: 5rem;
+}
+/* estilo a los titulos de cada seccion desde sobre mi hasta proyectos*/
+.text-fluid {
+    margin: 0 4%;
+    overflow-y: hidden;
+    color:rgb(0, 255, 0)
+}
+/*estilos a proyectos*/
+.col-sm-6{
+    padding-bottom: 2%;
+}
+/*tarjetas con fotos*/
+.card {
+   background-color: rgb(0, 0, 0);
+}

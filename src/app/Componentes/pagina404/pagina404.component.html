@@ -1,0 +1,15 @@
+<div class="container-center pb-5">
+    <div class="row mb-5" *ngFor="let info of error404">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4 mt-5"> 
+            <p class="mensaje">{{info.mensaje}}</p>
+            <p class="error">{{info.error}}</p>
+            <p class="enlace">{{info.enlace}}<a routerLink="">{{info.url}}</a></p>
+            <p class="juego">{{info.juego}}</p>
+        </div>
+        <div class="col-sm-6 mt-5">
+          <img [src]="info.img" class="img-fluid" [alt]="info.alt">
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <div class="row">
+      <div class="col-sm-6">
+        <label for="fotoUno" class="form-label text-fluid">Foto-1</label>
+        <input class="form-control" type="file" formControlName="logo1" [class.border-danger]="Logo1Invalid">
+        <div *ngIf="Logo1?.errors && Logo1?.touched">
+          <p *ngIf="Logo1?.hasError('required')" class="error">
+           La imagen es requerida.</p>
+        </div>
+        <label for="textUno" class="form-label text-fluid mt-2">Descripción:</label>
+        <textarea formControlName="descripcion1" [class.border-danger]="Descripcion1Invalid" class="form-control" rows="3"></textarea>
+        <div *ngIf="Descripcion1?.errors && Descripcion1?.touched">
+            <p *ngIf="Descripcion1?.hasError('required')" class="error">
+            La descripcion es requerida.</p>
+        </div>
+        <div *ngIf="this.form.get('descripcion1')?.errors?.['minlength']" class="error">
+        (Debe tener como minimo 150 caracteres)
+        </div>
+
+        <label for="fotoDos" class="form-label mt-2 text-fluid">Foto-2</label>
+        <input class="form-control" type="file" formControlName="logo2" [class.border-danger]="Logo2Invalid">
+        <div *ngIf="Logo2?.errors && Logo2?.touched">
+          <p *ngIf="Logo2?.hasError('required')" class="error">
+          La imagen es requerida.</p>
+        </div>
+        <label for="textDos" class="form-label text-fluid mt-2">Descripción:</label>
+        <textarea formControlName="descripcion2" [class.border-danger]="Descripcion2Invalid" class="form-control" rows="3"></textarea>  
+        <div *ngIf="Descripcion2?.errors && Descripcion2?.touched">
+            <p *ngIf="Descripcion2?.hasError('required')" class="error">
+            La descripcion es requerida.</p>
+        </div>
+        <div *ngIf="this.form.get('descripcion2')?.errors?.['minlength']" class="error">
+          (Debe tener como minimo 150 caracteres)
+        </div>
+     </div>
+     <div class="col-sm-6">
+        <label for="fotosTres" class="form-label text-fluid">Foto-3</label>
+        <input class="form-control" type="file" formControlName="logo3" [class.border-danger]="Logo3Invalid">
+          <div *ngIf="Logo3?.errors && Logo3?.touched">
+           <p *ngIf="Logo3?.hasError('required')" class="error">
+            La imagen es requerida.</p>
+          </div> 
+        <label for="textTres" class="form-label text-fluid mt-2">Descripción:</label>
+        <textarea formControlName="descripcion3" [class.border-danger]="Descripcion3Invalid" class="form-control" rows="3"></textarea>
+        <div *ngIf="Descripcion3?.errors && Descripcion3?.touched">
+            <p *ngIf="Descripcion3?.hasError('required')" class="error">
+            La descripcion es requerida.</p>
+          </div>
+        <div *ngIf="this.form.get('descripcion3')?.errors?.['minlength']" class="error">
+           (Debe tener como minimo 150 caracteres)
+        </div>
+
+        <label for="fotoCuatro" class="form-label mt-2 text-fluid">Foto-4</label>
+        <input class="form-control" type="file" formControlName="logo4" [class.border-danger]="Logo4Invalid">
+        <div *ngIf="Logo4?.errors && Logo4?.touched">
+          <p *ngIf="Logo4?.hasError('required')" class="error">
+          La imagen es requerida.</p>
+        </div>
+        <label for="textCuatro" class="form-label text-fluid mt-2">Descripción:</label>
+        <textarea formControlName="descripcion4" [class.border-danger]="Descripcion4Invalid" class="form-control" rows="3"></textarea>
+        <div *ngIf="Descripcion4?.errors && Descripcion4?.touched">
+            <p *ngIf="Descripcion4?.hasError('required')" class="error">
+            La descripcion es requerida.</p>
+          </div>
+        <div *ngIf="this.form.get('descripcion4')?.errors?.['minlength']" class="error">
+        (Debe tener como minimo 150 caracteres)
+        </div>
+      </div>
+    </div>
+   
+    <button type="submit"class="btn btn-dark mt-2 mb-3"> Guardar </button>
+    <button type="submit"class="btn btn-danger mt-2 mb-3">Eliminar</button>
+    <button type="submit"class="btn btn-secondary mt-2 mb-3">Actualizar</button>
+  </form>

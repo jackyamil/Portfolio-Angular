@@ -1,0 +1,41 @@
+
+.error{
+    font-size:3rem;
+    margin-left: 1rem;
+    color:rgb(66, 63, 63);
+}
+.mensaje{
+	font-size: 3rem;
+  margin-left: 1rem;
+  color:rgb(66, 63, 63);
+}
+.enlace{
+    margin-left: 1rem;
+    font-size: 2rem;
+    color:rgb(231, 236, 240);
+}
+.enlace a{
+    color:rgba(255, 4, 4, 0.842);
+}
+.juego{
+    margin-left: 1rem;
+    color:rgb(231, 236, 240);
+}
+.container-center{
+   
+    background-color: rgb(0, 0, 0);
+}
+/* imagen de fondo
+.img-fondo{
+    background-image: url(./../../../assets/img/error.jpg);*/
+ 
+  /* Para que la imagen de fondo no se repita 
+    background-repeat: no-repeat;*/
+/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido 
+    background-attachment: fixed;*/
+/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador 
+    background-size: cover;
+}
+.container-center{
+    padding-bottom: 11rem;
+}*/

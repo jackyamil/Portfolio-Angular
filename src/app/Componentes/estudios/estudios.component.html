@@ -1,0 +1,21 @@
+ <!-- aquí se encuentra mis estudios-->
+ <section id="estudios">
+    <h3 class="text-fluid mb-5"><a class="nav-link" [href]="enlaceMenu">
+      <i class="fa-solid" [ngClass]="iconFlecha"></i>
+    </a>{{seccion}}</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4" *ngFor="let estudio of estudios">
+          <div class="card text-bg-danger mb-3">
+            <div class="card-body">
+              <ul>
+                <li><h5 class="card-title overflow-visible">{{estudio.titulo}}</h5></li>
+                <li><p class="card-text"><a [href]="estudio.enlace" target="_blank">{{ estudio.nombre }}</a>{{ estudio.descripcion }}</p></li>
+                <li class="img-center"><img [src]="estudio.foto" class="img-fluid" [alt]="estudio.foto"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

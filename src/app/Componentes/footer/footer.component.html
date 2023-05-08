@@ -1,0 +1,13 @@
+ <!-- pie de pagina, contiene contactos-->
+ <footer id="contacto">
+  <address class="m-0">
+    <a class="nav-link" [href]="enlaceMenu"><i class="fa-solid" [ngClass]="iconFlecha"></i></a>
+    <p class="copyright">{{copyright}}</p>
+    <div *ngFor="let contacto of contactos">
+      <a class="red" href="#" data-bs-toggle="dropdown"><i [ngClass]="contacto.icono"></i></a>
+      <ul class="dropdown-menu bg-danger">
+        <p class="dropdown-item">{{contacto.mensaje}}</p>
+      </ul>
+    </div>
+  </address>
+</footer>

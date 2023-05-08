@@ -1,0 +1,50 @@
+<app-header></app-header>
+<div class="container pb-5 mb-5 ">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div class="modal-dialog  mt-5">
+                <div class="modal-content bg-danger ">
+                    <div class="modal-body bg-dark ">
+                        <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                            <div class="m-3">
+                                <label for="email" class="text-light">Email:</label>
+                                <input type="email" formControlName="email" [class.border-danger]="MailInvalid"  [class.border-success]="MailValid" class="form-control"  placeholder="email@ejemplo.com">
+                            </div>
+                            <div *ngIf="Mail?.errors && Mail?.touched">
+                                <p *ngIf="Mail?.hasError('required')" class="error">
+                                    El correo es requerido.</p>
+                                <p *ngIf="Mail?.hasError('email')" class="error">
+                                    El formato del correo debe ser válido.</p>
+                            </div>
+                            <div class="m-3">
+                                <label for="password" class="text-light">Password:</label>
+                                <input type="password"  formControlName="password"  [class.border-danger]="PasswordInvalid"  [class.border-success]="PasswordValid" class="form-control" placeholder="Contraseña">
+                            </div>
+                            <div *ngIf="Password?.errors && Password?.touched">
+                                <p *ngIf="Password?.hasError('required')" class="error">
+                                    La contraseña es requerida.</p>
+                                <p *ngIf="Password?.hasError('minlength')" class="error">
+                                    La contraseña debe ser de 8 o más caracteres.</p>
+                                <p *ngIf="Password?.hasError('pattern')" class="error">
+                                    La contraseña debe empezar con doble mayúscula y contener solo letras</p>    
+                            </div>
+        
+                            <button type="submit" class="btn btn-outline-danger mb-3 mx-3">Crear cuenta</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer m-4">
+                        <div class="text-light">
+                            <p class="text-break fw-bold lh-sm overflow-visible mx-3">Ya tienes una cuenta </p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-dark" type="submit">
+                            <a class="nav-link" routerLink="/login">Inicia sesión</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>
+

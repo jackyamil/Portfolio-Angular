@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <label for="telefono" class="form-label text-fluid">Telefono:</label>
+    <input type="text" formControlName="telefono" [class.border-danger]="TelefonoInvalid" class="form-control">
+    <div *ngIf="Telefono?.errors && Telefono?.touched">
+      <p *ngIf="Telefono?.hasError('required')" class="error">
+          Este campo es requerido.</p>
+    </div>
+    <div *ngIf="this.form.get('telefono')?.errors?.['maxlength']" class="error">
+      (Debe tener como máximo 30 caracteres)
+    </div>
+    <div *ngIf="this.form.get('telefono')?.errors?.['minlength']" class="error">
+      (Debe tener como minimo 10 caracteres)
+    </div>
+    <button type="submit"class="btn btn-dark mt-2"> Guardar</button>
+    <button type="submit"class="btn btn-danger mt-2">Eliminar</button>
+    <button type="submit"class="btn btn-secondary mt-2">Actualizar</button>
+  </form>
