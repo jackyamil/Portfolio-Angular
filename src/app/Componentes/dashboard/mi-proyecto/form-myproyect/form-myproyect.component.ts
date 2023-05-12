@@ -13,6 +13,8 @@ export class FormMyproyectComponent implements OnInit{
   constructor (private formBuilder: FormBuilder){ 
     ///Creamos el grupo de controles para el formulario 
     this.form= this.formBuilder.group({
+      titulo:['', [Validators.required, Validators.maxLength(25)]],
+      fecha:['', [Validators.required, Validators.maxLength(25), Validators.minLength(4)]],
       logo1:['', [Validators.required]],
       descripcion1:['', [Validators.required, Validators.minLength(100)]],
       logo2:['', [Validators.required]],
@@ -26,6 +28,22 @@ export class FormMyproyectComponent implements OnInit{
   
   }
     ngOnInit(){}  
+
+    get Titulo(){
+      return this.form.get("titulo");
+     }
+   
+     get TituloInvalid(){
+       return this.Titulo?.touched && !this.Titulo?.valid;
+     }
+
+     get Fecha(){
+      return this.form.get("fecha");
+     }
+   
+     get FechaInvalid(){
+       return this.Fecha?.touched && !this.Fecha?.valid;
+     }
 
    get Logo1(){
     return this.form.get("logo1");

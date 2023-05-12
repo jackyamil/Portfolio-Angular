@@ -8,7 +8,8 @@ import { ServiciosPortfolioService } from 'src/app/servicios/servicios-portfolio
 })
 export class ProyectosComponent implements OnInit {
    seccion= "Proyectos: " ;
-   titulo= "mi primer proyecto"
+   titulo= "mi primer proyecto";
+   fecha= "2023";
    proyectos: any = [];
    iconFlecha: string = "";
    enlaceMenu: string = "";

@@ -141,7 +141,8 @@
             "color":"bg-info"
         }
     ],
-    "proyectos":[
+    "proyectos": [
+
         {
             "id":0,
             "foto":"../../../assets/img/ejemplo.png",

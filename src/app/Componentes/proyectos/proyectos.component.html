@@ -3,10 +3,12 @@
   <h4 class="text-fluid mb-5">
     <a class="nav-link" [href]="enlaceMenu">
       <i class="fa-solid" [ngClass]="iconFlecha"></i>
-    </a>{{seccion|uppercase}}<span>{{titulo|titlecase}}</span></h4>
+    </a>{{seccion|uppercase}}</h4>
     
     <div class="container text-light">
       <div class="row">
+       <span class="text-light">{{titulo|uppercase}} {{fecha}}</span>
+
         <div class="col-sm-6" *ngFor="let proyecto of proyectos">
           <div class="card">
             <img [src]="proyecto.foto" [alt]="proyecto.alt" class="img-fluid">

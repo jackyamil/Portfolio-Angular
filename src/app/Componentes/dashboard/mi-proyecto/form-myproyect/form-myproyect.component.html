@@ -1,6 +1,30 @@
 <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
     <div class="row">
-      <div class="col-sm-6">
+      
+      <div class="col-sm-4">
+      <label for="titulo" class="form-label text-fluid">Titulo del Proyecto</label>
+      <input type="text" formControlName="titulo" [class.border-danger]="TituloInvalid" class="form-control">
+      <div *ngIf="Titulo?.errors && Titulo?.touched">
+        <p *ngIf="Titulo?.hasError('required')" class="error">
+            El titulo es requerido.</p>
+      </div>
+      <div *ngIf="this.form.get('titulo')?.errors?.['maxlength']" class="error">
+        (Debe tener como máximo 20 caracteres)
+      </div>
+      <label for="fecha" class="form-label text-fluid mt-2">Fecha de realización</label>
+      <input type="text" formControlName="fecha" [class.border-danger]="FechaInvalid" class="form-control">
+      <div *ngIf="Fecha?.errors && Fecha?.touched">
+        <p *ngIf="Fecha?.hasError('required')" class="error">
+            La fecha es requerida.</p>
+      </div>
+      <div *ngIf="this.form.get('fecha')?.errors?.['maxlength']" class="error">
+        (Debe tener como máximo 20 caracteres)
+      </div>
+      <div *ngIf="this.form.get('fecha')?.errors?.['minlength']" class="error">
+        (Debe tener como minimo 4 caracteres)
+      </div>
+    </div>
+      <div class="col-sm-4">
         <label for="fotoUno" class="form-label text-fluid">Foto-1</label>
         <input class="form-control" type="file" formControlName="logo1" [class.border-danger]="Logo1Invalid">
         <div *ngIf="Logo1?.errors && Logo1?.touched">
@@ -33,7 +57,8 @@
           (Debe tener como minimo 150 caracteres)
         </div>
      </div>
-     <div class="col-sm-6">
+      
+     <div class="col-sm-4">
         <label for="fotosTres" class="form-label text-fluid">Foto-3</label>
         <input class="form-control" type="file" formControlName="logo3" [class.border-danger]="Logo3Invalid">
           <div *ngIf="Logo3?.errors && Logo3?.touched">
